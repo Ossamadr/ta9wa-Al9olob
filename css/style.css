@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4f39df;
+    border-radius: 50px;
+}
+
+.header {
+    height: 100vh;
+    background: url(../image/cover.png);
+    background-size: cover;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 80px;
+    cursor: default;
+}
+
+.header-top img {
+    width: 120px;
+}
+
+.header-top ul {
+    list-style: none;
+}
+
+.header-top ul li {
+    display: inline-block;
+}
+
+.header-top ul li a {
+    color: white;
+    padding: 10px 20px;
+    transition: 0.5s;
+    position: relative;
+}
+
+.header-top ul li a::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    background: white;
+    transition: 0.5s;
+
+}
+
+.header-top ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.header-top ul li a:hover {
+    color: rgb(216, 236, 254);
+}
+
+.landing {
+    padding: 0 50px;
+    cursor: default;
+    position: relative;
+    height: calc(100vh - 160px);
+}
+
+.landing .info {
+    position: absolute;
+    top: 20%;
+}
+
+.landing .info h1 {
+    font-size: 50px;
+    color: white;
+    width: 650px;
+    margin-bottom: 20px;
+}
+
+.landing .info button {
+    height: 50px;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cairo', sans-serif;
+    background: #EC2B00;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 1px solid transparent;
+
+}
+
+.landing .info button:hover {
+    padding: 20px 60px;
+    border: 1px solid white;
+}
+
+.header .txt {
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: default;
+
+}
+
+.header .txt p {
+    color: rgb(206, 206, 206);
+}
+
+.header .txt i {
+    animation: up 1s linear infinite;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@keyframes up {
+    from {
+        transform: translateY(5px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+.section1 {
+    background: #040333;
+}
+.section1 .head-sec {
+    background: url(../image/احاديث\ نبوية.png);
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section1 .head-sec h2 {
+    font-size: 80px;
+    color: white;
+}
+.info-sec .info1 {
+    padding: 30px 50px;
+}
+.info-sec .info1 h3 {
+    color: white;
+}
+.info-sec .info1 .card-info1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.info-sec .info1 .card-info1 .box {
+    padding: 10px 30px;
+    border: 1px solid #ffffff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.info-sec .info1 .card-info1 .box:hover {
+    background: white;
+    color: #000;
+}
+.info-sec .hadith {
+    background: #0B0960;
+    color: white;
+    width: 70%;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin: 20px 0 ;
+}
+.section2 {
+    background: #330303;
+}
+.section2 .head-sec {
+    background: url(../image/مقتطفات\ كتب.png);
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section2 .head-sec h2 {
+    font-size: 80px;
+    color: white;
+}
+.section2 .info-sec .hadith {
+    background: #600909;
+}
+.section3 {
+    background: #03331C;
+}
+.section3 .head-sec {
+    background: url(../image/نصائح.png);
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section3 .head-sec h2 {
+    font-size: 80px;
+    color: white;
+}
+.section3 .info-sec .hadith {
+    background: #096012;
+}
+.section4 {
+    background: #33032C;
+}
+.section4 .head-sec {
+    background: url(../image/شروحات.png);
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section4 .head-sec h2 {
+    font-size: 80px;
+    color: white;
+}
+.section4 .info-sec .hadith {
+    background: #5E0960;
+}
+.footer {
+    background: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+@media (min-width: 768px) {
+ .mobile {
+    display: none;
+ }
+}
+@media (max-width: 767px) {
+ .header-top ul {
+    display: none;
+ }
+ .mobile {
+    position: relative;
+
+ }
+ .mobile i {
+    color: white;
+    font-size: 25px;
+ }
+ .mobile #open {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+ }
+ .mobile #close {
+    position: absolute;
+    right: -185px;
+    top: 20px;
+    cursor: pointer;
+ }
+ .mobile .list {
+    width: 200px;
+    background: white;
+    position: absolute;
+    right: -160px;
+
+    text-align: center;
+    z-index: 10;
+    transition: 0.5s;
+ }
+ .mobile .list a {
+    color: black;
+    display:block;
+    padding: 15px 0;
+    transition: 0.5s;
+   
+ }
+ .mobile .list a:hover {
+    background: #e9e9e9;
+ }
+ .landing .info h1 {
+    font-size: 40px;
+    width: 100%;
+ }
+ .info-sec .hadith {
+    width: 100%;
+ }
+ .section1 .head-sec h2, .section2 .head-sec h2, .section3 .head-sec h2, .section4 .head-sec h2  {
+    font-size: 40px;
+ }
+}
+.hide {
+    display: none;
+}
